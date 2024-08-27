@@ -1,0 +1,119 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  background-color: #faf9f6;
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+}
+.main {
+  flex: 1;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+footer {
+  text-align: right;
+  color: midnightblue;
+}
+
+.hero-font {
+  background: linear-gradient(
+    to right top,
+    #4337e4,
+    #155bf3,
+    #0078fc,
+    #0392ff,
+    #44a9ff,
+    #4ab8ff,
+    #5cc5fd,
+    #74d2fb,
+    #73daf7,
+    #7ae1f1,
+    #85e7ea,
+    #95ede3
+  );
+  -webkit-text-fill-color: transparent;
+  background-clip: inherit;
+  -webkit-background-clip: text;
+}
+
+.logo {
+  background: linear-gradient(
+    to right top,
+    #e1ffa1,
+    #c9fe9f,
+    #adfc9f,
+    #8dfaa4,
+    #64f8ab
+  );
+  border-radius: 12%;
+  display: block;
+  width: 250px;
+  height: auto;
+}
+
+.tile-image {
+  float: left;
+  width: 300px;
+  height: 300px;
+  padding: 30px;
+}
+
+.left {
+  float: left;
+  margin-right: 20px;
+}
+
+.right {
+  float: right;
+}
+
+.card {
+  width: 47%;
+}
+
+.card-text {
+  text-align: center;
+  font-weight: 100;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.card-title {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.footer {
+  clear: both;
+  text-align: center;
+  color: #4337e4;
+}
+
+@media (max-width: 680px) {
+  .logo {
+    width: 150px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .card img {
+    margin-bottom: 20px;
+    width: 100%;
+    display: inline;
+    object-fit: cover;
+  }
+}

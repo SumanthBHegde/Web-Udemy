@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Create Post</title>
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %>
+    <h1>Create a New Post</h1>
+    <form action="/create" method="POST">
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" required />
+
+      <label for="content">Content:</label>
+      <textarea name="content" id="content" required></textarea>
+
+      <button type="submit">Create Post</button>
+    </form>
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>

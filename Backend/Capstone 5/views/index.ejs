@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Book Collection</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero bg-light text-center py-5">
+      <div class="container">
+        <h1 class="display-4">Books I’ve Vibed With 📚</h1>
+        <p class="lead">
+          Quick summaries but packed with deets. Use the ISBN to snag it from
+          your local library or fave bookstore. I’m constantly updating this, so
+          check back for fresh reads!
+        </p>
+        <p class="lead">
+          You’ll find my faves at the top, but feel free to sort by title,
+          newest, or what I rate the highest. Got questions? Hit up my FAQ page
+          or slide into my DMs.
+        </p>
+      </div>
+    </section>
+
+    <!-- Book Cards Section -->
+    <div class="container mt-5">
+      <div class="row g-4">
+        <% books.forEach(book => { %>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="<%= book.cover_url %>"
+              class="card-img-top"
+              alt="<%= book.title %> cover"
+            />
+            <div class="card-body">
+              <h5 class="card-title"><%= book.title %></h5>
+              <p class="card-text">
+                <strong>Author:</strong> <%= book.author %>
+              </p>
+              <p class="card-text">
+                <strong>Rating:</strong> <%= book.rating %> / 5
+              </p>
+              <p class="card-text"><strong>Notes:</strong> <%= book.notes %></p>
+              <p class="card-text">
+                <strong>Date Read:</strong> <%= book.read_date %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

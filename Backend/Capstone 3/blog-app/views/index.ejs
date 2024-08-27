@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Blog Home</title>
+  </head>
+  <body>
+    <%- include("partials/header.ejs") %>
+    <div class="starter-message">
+      <h1>Welcome to the Blog!</h1>
+      <p>Feel free to browse through the posts or create your own.</p>
+    </div>
+    <br />
+    <% posts.forEach(post => { %>
+    <div class="post">
+      <h2><%= post.title %></h2>
+      <p><%= post.content %></p>
+      <button type="submit"><a href="/edit/<%= post.id %>">Edit</a></button>
+      <form
+        action="/delete/<%= post.id %>"
+        method="POST"
+        style="display: inline"
+      >
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+    <% }) %> <%- include("partials/footer.ejs") %>
+  </body>
+</html>
